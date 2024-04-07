@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        header {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHTuUDUaAwSY6TB17xYCS7Cyhafw8qO280bg&s');
+            height: 80vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .logo img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: white;
+        }
+
+        .center_text {
+            text-align: center;
+        }
+
+        #bt1,
+        #bt2,
+        #registerButton {
+            border: 1px solid #333;
+            color: #333;
+            padding: 5px;
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        #bt1:hover,
+        #bt2:hover,
+        #registerButton:hover {
+            background-color: #333;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        #registrationForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #AboutUs1,#objective1,#registrationrules1,#VenueandTiming1,#contact1 {
+            color: white;
+            background-color: rgb(72, 70, 70);
+            width: 600px;
+            height: 200px;
+            padding: 15px;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            text-align: center; /* Add this line to center the content */
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#AboutUs">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmd6sctHB0cVQXH-Zi4yoQ7ogOiRm1XiwLQ&s" alt="Logo">
+        </div>
+        <h1>Botz Hackathon</h1>
+        <div class="center_text">
+            <button id="registerButton" onclick="showRegistrationForm()">Register</button>
+        </div>
+    </header>
+
+
+    <div id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="CollegeName">College Name:</label>
+        <input type="text" id="CollegeName" name="CollegeName" required><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required><br>
+
+        <label for="programmingLanguage">Programming Language:</label>
+        <select id="programmingLanguage" name="programmingLanguage">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+        </select><br>
+
+        <button onclick="submitRegistration()">Submit</button>
+    </div>
+    
+    <script>
+        function showRegistrationForm() {
+            var registrationForm = document.getElementById("registrationForm");
+            if (registrationForm.style.display === "none" || registrationForm.style.display === "") {
+                registrationForm.style.display = "block";
+            } else {
+                registrationForm.style.display = "none";
+            }
+        }
+    </script>
+    
+    <script>
+        function submitRegistration() {
+            alert("Registration Successful");
+        }
+    </script>
+
+    <section id="AboutUs">
+        <center>
+            <div id="AboutUs1">
+                <h2>About the Hackathon</h2>
+                <p>Welcome to the Botz Hackathon 2024! This hackathon is a platform for creative minds to come together and tackle real-world challenges through innovative solutions. Whether you're a seasoned developer, a designer, or someone with a passion for problem-solving, this event is for you. Get ready to unleash your creativity, collaborate with like-minded individuals, and make a difference!</p>
+            </div>
+        </center>
+    </section>
+    
+    <section id="objective">
+        <center>
+            <div id="objective1">
+                <h2>Objective</h2>
+                <p>The objective of Botz Hackathon 2024 is to develop technological solutions that empower communities and address pressing social issues. Participants will work in teams to create projects that have a tangible impact on society, whether it's enhancing accessibility, promoting sustainability, improving healthcare, or fostering education.</p>
+            </div>
+        </center>
+    </section>
+
+    <section id="registrationrules">
+        <center>
+            <div id="registrationrules1">
+                <h2>Registration Rules and Timelines</h2>
+                <p>Register your team of 2-4 members on our website [Registration Link]. Registration closes on April 10th, 2024.</p>
+            </div>
+        </center>
+    </section>
+
+    <section id="VenueandTiming">
+        <center>
+            <div id="VenueandTiming1">
+                <h2>Venue and Timing</h2>
+                <p>Venue for the hackathon is Loyola-ICAM College of Engineering and Technology and the Hackathon is on 15th and 16th of April.</p>
+            </div>
+    </center>
+    </section>
+
+    <section id="contact">
+        <center>
+            <div id="contact1">
+                <h2>Contact Us</h2>
+                <p>For inquiries, please contact us at <strong>(BotzHackathon@gmail.com)</strong>.</p>
+            </div>
+        </center>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
